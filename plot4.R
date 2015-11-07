@@ -1,5 +1,5 @@
 
-# plot4.R Creates daily summaries for Energy sub metering
+# plot4.R Creates multiple graphs on same PNG
 
 # We assume data is placed in the working directory
 # using first row as header
@@ -21,6 +21,7 @@ par(mfrow=c(2,2))
 plot(x=Rdata$Time, y=Rdata$Global_active_power, xlab = "",
      ylab = "Global Active Power (kilowatts)", type = 'l')
 
+#(1,2)
 plot(x=Rdata$Time, y=Rdata$Voltage, xlab = "datetime", ylab = "Voltage", type = 'l')
 
 #(2,1) plot 3 differents lines with same x without Xlabel
@@ -32,6 +33,7 @@ lines(x=Rdata$Time, y=Rdata$Sub_metering_3, col = 'blue')
 legend("topright", legend = sprintf("Sub_metering_%d", 1:3), bty = "n",
        col = c('black',"red","blue"), lty=c(1,1,1))
 
+#(2,2)
 plot(x=Rdata$Time, y=Rdata$Global_reactive_power,  xlab = "datetime",
      ylab = "Global_reactive_power", type = 'l')
 
