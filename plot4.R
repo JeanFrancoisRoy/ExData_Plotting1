@@ -19,7 +19,7 @@ par(mfrow=c(2,2))
 
 #(1,1)
 plot(x=Rdata$Time, y=Rdata$Global_active_power, xlab = "",
-     ylab = "Global Active Power (kilowatts)", type = 'l')
+     ylab = "Global Active Power", type = 'l')
 
 #(1,2)
 plot(x=Rdata$Time, y=Rdata$Voltage, xlab = "datetime", ylab = "Voltage", type = 'l')
